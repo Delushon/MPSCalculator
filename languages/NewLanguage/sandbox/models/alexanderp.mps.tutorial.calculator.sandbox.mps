@@ -8,6 +8,7 @@
   <imports />
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1092119917967" name="jetbrains.mps.baseLanguage.structure.MulExpression" flags="nn" index="17qRlL" />
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
@@ -39,25 +40,27 @@
   <node concept="2PXgge" id="Dqx1AZG1fb">
     <property role="TrG5h" value="MyCalc" />
     <node concept="2PUDvl" id="Dqx1AZG3dJ" role="2PUDvA">
-      <property role="TrG5h" value="width" />
-    </node>
-    <node concept="2PUDvl" id="Dqx1AZG3dL" role="2PUDvA">
-      <property role="TrG5h" value="height" />
+      <property role="TrG5h" value="Java Hours" />
     </node>
     <node concept="2PUDvl" id="Dqx1AZG3dO" role="2PUDvA">
-      <property role="TrG5h" value="depth" />
+      <property role="TrG5h" value="PHP Hours" />
     </node>
     <node concept="2PUFtx" id="Dqx1AZGp47" role="2PUFu6">
-      <node concept="3cpWs3" id="Dqx1AZGx_d" role="2PUGAF">
-        <node concept="2PUL_O" id="Dqx1AZGx_B" role="3uHU7w">
-          <ref role="2PUL_R" node="Dqx1AZG3dO" resolve="depth" />
-        </node>
-        <node concept="3cpWs3" id="Dqx1AZGpBd" role="3uHU7B">
-          <node concept="3cmrfG" id="Dqx1AZGp4b" role="3uHU7B">
-            <property role="3cmrfH" value="2" />
+      <node concept="3cpWs3" id="Dqx1AZJRE7" role="2PUGAF">
+        <node concept="17qRlL" id="Dqx1AZJREA" role="3uHU7w">
+          <node concept="3cmrfG" id="Dqx1AZJREN" role="3uHU7w">
+            <property role="3cmrfH" value="5" />
           </node>
-          <node concept="3cmrfG" id="Dqx1AZGpBp" role="3uHU7w">
-            <property role="3cmrfH" value="2" />
+          <node concept="2PUL_O" id="Dqx1AZJREq" role="3uHU7B">
+            <ref role="2PUL_R" node="Dqx1AZG3dO" resolve="PHP Hours" />
+          </node>
+        </node>
+        <node concept="17qRlL" id="Dqx1AZJRfC" role="3uHU7B">
+          <node concept="2PUL_O" id="Dqx1AZJRfw" role="3uHU7B">
+            <ref role="2PUL_R" node="Dqx1AZG3dJ" resolve="Java Hours" />
+          </node>
+          <node concept="3cmrfG" id="Dqx1AZJRfL" role="3uHU7w">
+            <property role="3cmrfH" value="10" />
           </node>
         </node>
       </node>
