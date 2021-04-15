@@ -10,6 +10,9 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Calculator;
+  private ConceptPresentation props_InputField;
+  private ConceptPresentation props_InputFieldReference;
+  private ConceptPresentation props_OutputField;
 
   @Override
   @Nullable
@@ -23,6 +26,27 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Calculator = cpb.create();
         }
         return props_Calculator;
+      case LanguageConceptSwitch.InputField:
+        if (props_InputField == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_InputField = cpb.create();
+        }
+        return props_InputField;
+      case LanguageConceptSwitch.InputFieldReference:
+        if (props_InputFieldReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x5c6ee37bd0c245eeL, 0xadf793b96280be62L, 0xa5a8419bfb19d6dL, 0xa5a8419bfb19d6eL, "field", "", "");
+          props_InputFieldReference = cpb.create();
+        }
+        return props_InputFieldReference;
+      case LanguageConceptSwitch.OutputField:
+        if (props_OutputField == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("OutputField");
+          props_OutputField = cpb.create();
+        }
+        return props_OutputField;
     }
     return null;
   }
